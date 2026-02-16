@@ -1,0 +1,182 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    background: rgba(15, 32, 39, 0.9);
+    padding: 18px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 🔹 NAV CONTAINER (logo left, links right) */
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;   /* key requirement */
+    align-items: center;
+}
+
+/* ===== LOGO STYLE ===== */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00eaff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* ===== NAV LINKS ===== */
+.nav a {
+    text-decoration: none;
+    color: #cfd8dc;
+    font-size: 16px;
+    margin-left: 28px;   /* gap between links */
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* ACTIVE & HOVER */
+.nav a:hover,
+.nav a.active {
+    color: #00eaff;
+}
+
+/* underline animation */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #00eaff;
+    transition: 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education {
+    padding: 80px 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+.education h1 {
+    text-align: center;
+    font-size: 38px;
+    color: #00eaff;
+    margin-bottom: 50px;
+}
+
+/* ===== EDUCATION CONTAINER ===== */
+.education-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ===== EDUCATION CARD ===== */
+.education-card {
+    background: #1f2630;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.15);
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: slideUp 1s ease forwards;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 45px rgba(0, 234, 255, 0.4);
+}
+
+/* TEXT */
+.education-card h2 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.institution {
+    color: #00eaff;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.year {
+    font-size: 14px;
+    color: #90a4ae;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 15px;
+    color: #b0bec5;
+    line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #90a4ae;
+    font-size: 14px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 10px 15px;
+    }
+
+    .education h1 {
+        font-size: 30px;
+    }
+}

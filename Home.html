@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+}
+
+/* ===== MAIN CONTAINER ===== */
+main.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    background: #1f2630;
+    border-radius: 20px;
+    padding: 30px 50px 60px;
+    box-shadow: 0 0 60px rgba(0,255,255,0.35);
+    margin: 40px auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo span {
+    color: #00eaff;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cfd8dc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+/* TEXT */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h4 {
+    color: #cfd8dc;
+    margin-bottom: 8px;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    color: white;
+    font-weight: 400;
+}
+
+.hero-text h3 span {
+    color: #00eaff;
+}
+
+.hero-text p {
+    color: #b0bec5;
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00eaff;
+    border-radius: 50%;
+    color: #00eaff;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #00eaff;
+    color: #1f2630;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #00eaff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00eaff;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #1f2630;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== IMAGE ===== */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon {
+    width: 280px;
+    height: 320px;
+    background: #00eaff;
+    -webkit-clip-path: polygon(
+        50% 0%, 100% 25%, 100% 75%,
+        50% 100%, 0% 75%, 0% 25%
+    );
+    clip-path: polygon(
+        50% 0%, 100% 25%, 100% 75%,
+        50% 100%, 0% 75%, 0% 25%
+    );
+    box-shadow: 0 0 40px #00eaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    clip-path: inherit;
+    border-radius: 10px;
+}
+
+/* ===== COMMON SECTIONS ===== */
+.section {
+    margin-top: 120px;
+    padding-top: 40px;
+}
+
+.section h2 {
+    color: #00eaff;
+    margin-bottom: 15px;
+}
+
+.section p {
+    color: #b0bec5;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: stretch;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Port<span>folio</span></div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h4>Hello, I'm</h4>
+            <h1>Anusha</h1>
+            <h3>I'm a <span>Front-End Developer</span></h3>
+            <p>Fresher passionate about building clean and modern web interfaces.</p>
+            <a href="cv.pdf" class="btn" download>Download CV</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="hexagon">
+                <img src="C:\Users\user\OneDrive\Desktop\WEB DEV\Portfilo\cartoon image" alt="Profile picture of Anusha">
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+</body>
+</html>
